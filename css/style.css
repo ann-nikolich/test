@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins-Regular'),
+        url('../src/fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../src/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: local('Poppins-SemiBold'),
+        url('../src/fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('../src/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+
+html {
+    overflow-y: hidden;
+}
+
+body {
+    background-image: url(/src/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+section {
+    max-width: 50%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    padding: 2vh;
+}
+
+.inform {
+    max-width: 600px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+#blockImg1 {
+    display:none;
+    position:absolute;
+    margin:-50px 0 0 -75px
+}
+
+#click_img1,.click_img1{
+    cursor:pointer;
+}
+
+.logo {
+    margin-left: 22px;
+}
+
+.carousel {
+    margin-bottom: 38px;
+}
+
+.header {
+    margin-bottom: 38px;
+    font-size: 46px;
+    font-weight: 600;
+    max-width: 570px;
+}
+
+.text {
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    max-width: 498px;
+}
+
+.inform_button {
+    background: linear-gradient(258.3deg, #6A42F8 0%, #D375E0 97.45%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    border: none;
+    padding: 30px 24px;
+}
+
+.inform_button_text {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 18px;
+}
+
+.inform_button_text:hover {
+    color: #fff;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider__item img {
+    border-radius: 15%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.slider__control__previous, .slider__control__next {
+    cursor: pointer;
+}
+
+.slider__control__previous {
+    margin-right: 24px;
+}
+
+.slider__control {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.slider__item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.policy {
+    margin-left: 2vh;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.policy:hover {
+    color: #fff;
+}
+
+@media (max-width: 1399.98px) {
+    body {
+        background-size: auto auto;
+    }
+    
+    .carousel {
+        max-width: 80%;
+    }
+
+    .text {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .inform {
+        max-width: 490px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .inform_button {
+        padding: 26px 20px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    html {
+        overflow-y: auto;
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0;
+    }
+
+    .inform {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper {
+        margin-bottom: 24px;
+    }
+
+    .carousel {
+        margin-bottom: 20px;
+    }
+
+    .text {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .slider__control {
+        justify-content: space-evenly;
+    }
+
+    .slider__control__mini {
+        width: 130%;
+    }
+
+    .policy {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    section {
+        max-width: 80%;
+    }
+}
